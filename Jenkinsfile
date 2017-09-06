@@ -23,7 +23,7 @@ node('slave-swarm-dind') {
                 echo 'Building docker images...'
                 sh 'echo ${DHUB_PASS};'
                 sh 'docker login harbor.picsart.tools -u ${DHUB_USER} -p ${DHUB_PASS}; echo "DockerLogin exitcode=${?}"'
-                sh 'pwd; ls -al; docker build --tag=harbor.picsart.tools/${DHUB_PROJECT}/${SERVICE_NAME}:${VERSION} -f docker/Dockerfile .; echo "Docker BUILD exitcode=${?}"'
+                sh 'pwd; ls -al; docker build --tag=harbor.picsart.tools/${DHUB_PROJECT}/${SERVICE_NAME}:${VERSION} -f Dockerfile .; echo "Docker BUILD exitcode=${?}"'
                 echo 'All images were built successfully!'
             }
             
