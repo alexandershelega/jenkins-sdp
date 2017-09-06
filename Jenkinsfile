@@ -31,6 +31,10 @@ node('slave-swarm-dind') {
                 echo 'Pushing docker images...'
                 sh 'docker push harbor.picsart.tools/${DHUB_PROJECT}/${SERVICE_NAME}:${VERSION}; echo "Docker PUSH exitcode=${?}"'
             }
+		stage('echo images') {
+                echo 'echo...'
+                sh 'echo test'
+            }
        if (env.BRANCH_NAME =~ /release\/[0-9]+\.[0-9]+\.[0-9]+$/) {
                 sshagent(credentials: ['ec011a52-2573-47b3-a627-ad7147e69613']) {
                     stage('Disable branch') {
