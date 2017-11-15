@@ -6,7 +6,7 @@ multibranchPipelineJob('test_folder/test_job') {
 	branchSources {
         git {
             remote('https://github.com/alexandershelega/jenkins-sdp2.git')
-            credentialsId('7df4f184-e3f6-4ff5-88a6-5087f907d57f ')
+            credentialsId('b02b56e4-baa6-481c-ab2d-39f7403880e4')
             
         }
 	}
