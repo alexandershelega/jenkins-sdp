@@ -22,6 +22,7 @@ folder("simple") { }
 
 
 pipelineJob('simple/simple_pipeline_job') {
+displayName('simple_pipeline_test')	
     scm {
         git {
             remote {
@@ -31,7 +32,5 @@ pipelineJob('simple/simple_pipeline_job') {
                 branch('master')
             }
         }
-    }
-    daysToKeep(1)
-    numToKeep(1)	
+    }	
 }
