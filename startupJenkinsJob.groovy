@@ -22,15 +22,18 @@ folder("simple") { }
 
 
 pipelineJob('simple/simple_pipeline_job') {
-displayName('simple_pipeline_test')	
-    scm {
-        git {
-            remote {
-                name('sdp2')
-                url('https://github.com/alexandershelega/jenkins-sdp2.git')
-		credentials('a85736fd-a8d3-4686-9e6a-bc9fe9585767')
-                branch('master')
-            }
-        }
-    }	
+displayName('simple_pipeline_test')
+	definition {
+    	cpsScm {
+    		scm {
+    	    	git {
+    	        	remote {
+    	            	name('sdp2')
+    	            	url('https://github.com/alexandershelega/jenkins-sdp2.git')
+    	            	branch('master')
+    	        	}
+    	    	}
+   	     	}
+    	}
+	}
 }
