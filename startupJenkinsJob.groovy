@@ -1,7 +1,7 @@
 folder("test_folder") { }
 
 
-multiPipelineJob('test_folder/test_job') {
+multibranchPipelineJob('test_folder/test_job') {
    description('test_job')
 	branchSources {
         git {
