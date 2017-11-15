@@ -32,4 +32,6 @@ pipelineJob('simple/simple_pipeline_job') {
             }
         }
     }
+    daysToKeep(1)
+    numToKeep(1)	
 }
