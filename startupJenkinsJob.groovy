@@ -37,4 +37,9 @@ displayName('simple_pipeline_test')
    	     	}
     	}
 	}
+    orphanedItemStrategy {
+        discardOldItems {
+            daysToKeep(7)
+        }
+    }	
 }
