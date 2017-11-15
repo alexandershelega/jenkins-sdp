@@ -41,10 +41,10 @@ displayName('simple_pipeline_test')
 		buildDiscarder {
 			strategy {
 				logRotator {
-					artifactDaysToKeepStr(1)
-					artifactNumToKeepStr(1)
-					daysToKeepStr(1)
-					numToKeepStr(1)
+					artifactDaysToKeepStr('1')
+					artifactNumToKeepStr('1')
+					daysToKeepStr('1')
+					numToKeepStr('1')
 				}
 			}
 		}
