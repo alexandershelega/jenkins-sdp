@@ -23,6 +23,7 @@ folder("simple") { }
 
 pipelineJob('simple/simple_pipeline_job') {
 displayName('simple_pipeline_test')
+description('simple_pipeline_test')	
 	definition {
 	    	cpsScm {
 	    		scm {
