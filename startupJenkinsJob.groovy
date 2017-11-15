@@ -1,7 +1,7 @@
 folder("test_folder") { }
 
 
-PipelineJob('test_folder/test_job') {
+pipelineJob('test_folder/test_job') {
    description('test_job')
 
         git {
