@@ -21,15 +21,14 @@ multibranchPipelineJob('test_folder/test_job') {
 folder("analytics") { }
 
 
-pipelineJob('analytics/analytics_basic_images') {
-displayName('analytics_basic_images')
-description('analytics_basic_images')	
+pipelineJob('analytics/analytics_base_images') {
+displayName('analytics_base_images')
+description('analytics_base_images')	
 	definition {
 	    	cpsScm {
 	    		scm {
 	    	    	git {
 	    	        	remote {
-	    	            	name('analytics_basic_images')
 	    	            	url('https://github.com/PicsArt/pa-docker-analytics-images.git')
 				credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
 	    	            	branch('master')
