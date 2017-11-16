@@ -60,7 +60,6 @@ description('analytics_node_images')
 	    		scm {
 	    	    	git {
 	    	        	remote {
-				name('picsart-analytics')
 	    	            	url('https://github.com/PicsArt/picsart-analytics.git')
 				credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
 	    	            	branch('master')
