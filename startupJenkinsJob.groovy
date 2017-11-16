@@ -42,10 +42,10 @@ description('analytics_basic_images')
 		buildDiscarder {
 			strategy {
 				logRotator {
-					artifactDaysToKeepStr('1')
-					artifactNumToKeepStr('1')
-					daysToKeepStr('1')
-					numToKeepStr('1')
+					artifactDaysToKeepStr('2')
+					artifactNumToKeepStr('2')
+					daysToKeepStr('2')
+					numToKeepStr('2')
 				}
 			}
 		}
@@ -73,10 +73,10 @@ description('analytics_node_images')
 		buildDiscarder {
 			strategy {
 				logRotator {
-					artifactDaysToKeepStr('1')
-					artifactNumToKeepStr('1')
-					daysToKeepStr('1')
-					numToKeepStr('1')
+					artifactDaysToKeepStr('2')
+					artifactNumToKeepStr('2')
+					daysToKeepStr('2')
+					numToKeepStr('2')
 				}
 			}
 		}
