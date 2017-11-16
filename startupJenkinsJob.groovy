@@ -80,3 +80,34 @@ description('analytics_node_images')
 		}
 	}
 }
+
+
+pipelineJob('analytics/screen-recording-api') {
+displayName('screen-recording-api')
+description('screen-recording-api')	
+	definition {
+	    	cpsScm {
+	    		scm {
+	    	    	git {
+	    	        	remote {
+	    	            	url('https://github.com/PicsArt/screen-recording-api.git')
+				credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
+	    	            	branch('master')
+	    	        	}
+	    	    	    }
+	   	     	}
+	    	    }
+		}
+	properties {
+		buildDiscarder {
+			strategy {
+				logRotator {
+					artifactDaysToKeepStr('2')
+					artifactNumToKeepStr('2')
+					daysToKeepStr('2')
+					numToKeepStr('2')
+				}
+			}
+		}
+	}
+}
