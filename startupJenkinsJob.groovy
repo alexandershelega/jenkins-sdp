@@ -6,7 +6,7 @@ multibranchPipelineJob('test_folder/test_job') {
 	branchSources {
         git {
             remote('https://github.com/alexandershelega/jenkins-sdp2.git')
-            credentialsId('860e5e82-b53e-4595-a22f-9db9e05a0640')
+            credentialsId('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
             
         }
 	}
@@ -31,7 +31,7 @@ description('analytics_basic_images')
 	    	        	remote {
 	    	            	name('analytics_basic_images')
 	    	            	url('https://github.com/PicsArt/pa-docker-analytics-images.git')
-				credentials('860e5e82-b53e-4595-a22f-9db9e05a0640')
+				credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
 	    	            	branch('master')
 	    	        	}
 	    	    	    }
