@@ -51,3 +51,34 @@ description('analytics_basic_images')
 		}
 	}
 }
+
+pipelineJob('analytics/analytics_node_images') {
+displayName('analytics_node_images')
+description('analytics_node_images')	
+	definition {
+	    	cpsScm {
+	    		scm {
+	    	    	git {
+	    	        	remote {
+	    	            	name('analytics_node_images')
+	    	            	url('https://github.com/PicsArt/picsart-analytics.git')
+				credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
+	    	            	branch('master')
+	    	        	}
+	    	    	    }
+	   	     	}
+	    	    }
+		}
+	properties {
+		buildDiscarder {
+			strategy {
+				logRotator {
+					artifactDaysToKeepStr('1')
+					artifactNumToKeepStr('1')
+					daysToKeepStr('1')
+					numToKeepStr('1')
+				}
+			}
+		}
+	}
+}
