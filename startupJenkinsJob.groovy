@@ -18,20 +18,20 @@ multibranchPipelineJob('test_folder/test_job') {
     }
 }
 
-folder("simple") { }
+folder("analytics") { }
 
 
-pipelineJob('simple/simple_pipeline_job') {
-displayName('simple_pipeline_test')
-description('simple_pipeline_test')	
+pipelineJob('analytics/analytics_basic_images') {
+displayName('analytics_basic_images')
+description('analytics_basic_images')	
 	definition {
 	    	cpsScm {
 	    		scm {
 	    	    	git {
 	    	        	remote {
-	    	            	name('sdp2')
-	    	            	url('https://github.com/alexandershelega/jenkins-sdp2.git')
-							credentials('860e5e82-b53e-4595-a22f-9db9e05a0640')
+	    	            	name('analytics_basic_images')
+	    	            	url('https://github.com/PicsArt/pa-docker-analytics-images.git')
+				credentials('860e5e82-b53e-4595-a22f-9db9e05a0640')
 	    	            	branch('master')
 	    	        	}
 	    	    	    }
