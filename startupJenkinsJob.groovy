@@ -23,7 +23,7 @@ folder("analytics") { }
 
 pipelineJob('analytics/analytics_base_images') {
 displayName('analytics_base_images')
-description('analytics_base_images')	
+description('analytics_base_images_test')	
 	definition {
 	    	cpsScm {
 	    		scm {
