@@ -1,5 +1,4 @@
 folder("test_folder") { }
-folder("test_folder1") { }
 
 
 multibranchPipelineJob('test_folder/test_job') {
