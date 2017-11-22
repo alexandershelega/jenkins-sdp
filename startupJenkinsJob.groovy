@@ -18,6 +18,41 @@ multibranchPipelineJob('test_folder/test_job') {
     }
 }
 
+
+pipelineJob('test_folder/simple_pipeline') {
+displayName('simple_pipeline')
+description('simple_pipeline')
+        definition {
+                cpsScm {
+                        scm {
+                        git {
+                                remote {
+                                url('https://github.com/alexandershelega/jenkins-sdp2.git')
+                                credentials('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
+                                branch('master')
+                                }
+                            }
+                        }
+                    }
+                }
+   	triggers {
+        	githubPush()
+    		 }
+        properties {
+                buildDiscarder {
+                        strategy {
+                                logRotator {
+                                        artifactDaysToKeepStr('2')
+                                        artifactNumToKeepStr('2')
+                                        daysToKeepStr('2')
+                                        numToKeepStr('2')
+                                }
+                        }
+                }
+        }
+}
+
+
 folder("analytics") { }
 
 
@@ -98,6 +133,8 @@ description('screen-recording-api')
 	   	     	}
 	    	    }
 		}
+
+
 	properties {
 		buildDiscarder {
 			strategy {
