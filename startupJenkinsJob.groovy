@@ -8,9 +8,12 @@ multibranchPipelineJob('test_folder/test_job') {
             remote('https://github.com/alexandershelega/jenkins-sdp2.git')
             credentialsId('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
             
-        }
+        	}
 	}
-
+   triggers {
+        periodic(5)
+    }
+	
     orphanedItemStrategy {
         discardOldItems {
             daysToKeep(1)
