@@ -11,8 +11,7 @@ multibranchPipelineJob('test_folder/test_job') {
         	}
 	}
    triggers {
-        cron('@5minutes')
-	periodic(5)   
+        pollSCM 'H/5 * * * *'   
     }
 	
     orphanedItemStrategy {
