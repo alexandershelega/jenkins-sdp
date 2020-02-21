@@ -1,25 +1,25 @@
 folder("test_folder") { }
 
 
-multibranchPipelineJob('test_folder/test_job') {
-   description('test_job')
-	branchSources {
-        git {
-            remote('https://github.com/alexandershelega/jenkins-sdp2.git')
-            credentialsId('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
-            
-        	}
-	}
-   triggers {
-        periodic(1)   
-    }
-	
-    orphanedItemStrategy {
-        discardOldItems {
-            daysToKeep(1)
-        }
-    }
-}
+//multibranchPipelineJob('test_folder/test_job') {
+//   description('test_job')
+//	branchSources {
+//        git {
+//            remote('https://github.com/alexandershelega/jenkins-sdp2.git')
+//            credentialsId('8f772c78-46fe-4f49-9599-3c3d4d32ae90')
+//            
+//        	}
+//	}
+//   triggers {
+//        periodic(1)   
+//    }
+//	
+//    orphanedItemStrategy {
+//        discardOldItems {
+//            daysToKeep(1)
+//        }
+//    }
+//}
 
 
 pipelineJob('test_folder/simple_pipeline') {
